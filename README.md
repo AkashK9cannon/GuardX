@@ -1,11 +1,30 @@
-# GuardX
-GuardX web browsers
-The project is undertaken to build a premium looking and functioning real world web browsers using Javascript based technologies for the development.
+# Gyrosurf
 
-The Windows Mac and Linux variant of the application is written using Chromium, Electron, Nodejs
-The Smartphone variant shall be writen using React Native.
+Gyrosurf web browser
 
-The Technologies used in development are Chromium, Nodejs, ElectronJS, C++ (will also be written some required parts). The project is a demonstration of how am i able to understand and develop softwares.
+This project aims to build a premium-looking and fully functional real-world web browser using JavaScript-based technologies.
 
-Thank you!
+The Windows, Mac, and Linux variants of the application are built using Chromium, Electron, and Node.js.  
+The smartphone variant will be written using React Native.
+
+### Technologies Used:
+- Chromium
+- Node.js
+- ElectronJS
+- C++ (for performance-critical parts)
+
+This project demonstrates my ability to understand and develop software.
+
+---
+
+### Screenshot
+
+![Gyrosurf App Screenshot](Windows/AppScreenshots/AppImage1.png)
+
+---
+
+Thank you!  
 Akash Khuntia
+416B617368204B68756E746961
+0x41 0x6B 0x61 0x73 0x68 0x20 0x4B 0x68 0x75 0x6E 0x74 0x69 0x61
+0x41 0x4B
