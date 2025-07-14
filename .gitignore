@@ -21,6 +21,7 @@ winbuild/
 *.tmp
 *.bak
 *.exe
+gu.cmd
 *.blockmap
 .DS_Store
 .idea/
