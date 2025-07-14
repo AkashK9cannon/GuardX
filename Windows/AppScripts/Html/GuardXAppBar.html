@@ -4,10 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/AppMenuStyles/theme1.css"/>
+    <link rel="stylesheet" href="../css/AppMenuStyles/theme1.css" />
   </head>
   <body>
     <div id="TabsBar" class="">
+      <div id="" class="PageTools">
+        <img
+          src="../../sysMedia/icons/BrowserServices.png"
+          alt=""
+          id=""
+          class="BrowserTools"
+        />
+        <img
+          src="../../sysMedia/icons/Home_Heart.png"
+          alt=""
+          class="BrowserTools"
+          id="HomeButton"
+        />
+      </div>
       <div id="Tabs" class="">
         <div class="" id="TabsContainer"></div>
         <div onclick="CreateTab()" class="" id="AddTabBtn">+</div>
@@ -44,24 +58,21 @@
     <div id="ToolsBar" class="">
       <div id="PageTools" class="">
         <div id="" class="PageTools">
-          <img src="../../sysMedia/icons/BackArrow.png" alt="" class="" id="BackButton" />
-        </div>
-        <div id="" class="PageTools">
-          <img src="../../sysMedia/icons/Forward.png" alt="" class="" id="ForwardButton" />
-        </div>
-        <div id="" class="PageTools">
-          <img src="../../sysMedia/icons/reload.png" alt="" class="" id="ReloadButton" />
-        </div>
-        <div id="" class="PageTools">
           <img
-            src="../../sysMedia/icons/Home_Heart.png"
+            src="../../sysMedia/icons/BackArrow.png"
             alt=""
             class=""
-            id="HomeButton"
+            id="BackButton"
           />
         </div>
       </div>
       <div id="urlbar" class="">
+          <img
+            src="../../sysMedia/icons/reload.png"
+            alt=""
+            class=""
+            id="ReloadButton"
+          />
         <img src="../../sysMedia/icons/Encrypted.png" alt="" id="" class="" />
         <input
           type="text"
@@ -72,31 +83,15 @@
         />
         <img src="../../sysMedia/icons/Star.png" alt="" id="" class="" />
       </div>
-      <div id="BrowserTools" class="">
-        <img
-          src="../../sysMedia/icons/Extension.png"
-          alt=""
-          id=""
-          class="BrowserTools"
-        />
-        <img
-          src="../../sysMedia/icons/Account.png"
-          alt=""
-          id=""
-          class="BrowserTools"
-        />
-        <img
-          src="../../sysMedia/icons/info.png"
-          alt=""
-          id=""
-          class="BrowserTools"
-        />
-        <img
-          src="../../sysMedia/icons/BrowserServices.png"
-          alt=""
-          id=""
-          class="BrowserTools"
-        />
+      <div id="PageTools" class="">
+        <div id="" class="PageTools">
+          <img
+            src="../../sysMedia/icons/Forward.png"
+            alt=""
+            class=""
+            id="ForwardButton"
+          />
+        </div>
       </div>
     </div>
     <script src="../Js/IpcRenderer.js"></script>

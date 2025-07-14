@@ -1,0 +1,33 @@
+directories:
+  output: ../Builds/WinApp
+  buildResources: build
+appId: com.gyrosurf.app
+productName: Gyrosurf
+files:
+  - filter:
+      - '**/*'
+      - '!Tabs.json'
+      - '!settings.json'
+extraResources:
+  - from: settings.json
+    to: settings.json
+  - from: Tabs.json
+    to: Tabs.json
+win:
+  target: nsis
+  icon: sysMedia/images/logo/FavIcon.ico
+mac:
+  icon: sysMedia/images/logo/FavIcon.icns
+linux:
+  icon: sysMedia/images/logo/lwthbg.png
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: GuardX
+  license: license.txt
+publish:
+  - provider: generic
+    url: https://your-download-server.com/guardx-updates/
+electronVersion: 34.5.8

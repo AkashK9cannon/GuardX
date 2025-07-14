@@ -136,15 +136,15 @@ body {
   justify-content: space-around;
   /* border: 0.5px solid black; */
 }
-#PageTools {
+#PageTools, #BrowserTools {
   display: flex;
-  width: 10vw;
+  width: max-content;
   height: 100%;
   align-items: center;
   justify-content: space-between;
   /* border: 0.5px solid black; */
 }
-.PageTools {
+.PageTools, .BrowserTools {
   display: flex;
   height: 100%;
   cursor: pointer;
@@ -153,16 +153,16 @@ body {
   justify-content: center;
   /* border: 0.5px solid black; */
 }
-.PageTools img {
+.PageTools img, .BrowserTools img {
   height: 2.5vh;
   cursor: pointer;
 }
-.PageTools:hover {
+.PageTools:hover, .BrowserTools:hover {
   background: rgba(80, 80, 80, 0.2);
   border-radius: 6px;
 }
 #urlbar {
-  width: 80vw;
+  width: 90vw;
   height: 75%;
   display: flex;
   border-radius: 30px;
@@ -191,26 +191,6 @@ body {
   background: rgba(80, 80, 80, 0.09);
 }
 #urlbar img:hover {
-  background: rgba(80, 80, 80, 0.2);
-}
-
-#BrowserTools {
-  width: max-content;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  /* border: 0.5px solid black; */
-  border-bottom-left-radius: 3px;
-  gap: 3px;
-  /* padding: 5px; */
-}
-.BrowserTools {
-  padding: 5px;
-  cursor: pointer;
-  height: 2.5vh;
-  border-radius: 6px;
-}
-.BrowserTools:hover {
   background: rgba(80, 80, 80, 0.2);
 }
 

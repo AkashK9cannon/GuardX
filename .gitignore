@@ -13,14 +13,12 @@ __pycache__/
 
 # Ignore build artifacts
 dist/
-Builds/
-winbuild/
+Builds/winbuild
 
 # Ignore editor and system files
 *.log
 *.tmp
 *.bak
-*.exe
 gu.cmd
 *.blockmap
 .DS_Store

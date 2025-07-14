@@ -1,7 +1,7 @@
 {
-  "name": "guardx",
+  "name": "gyrosurf",
   "version": "0.1.0",
-  "description": "GuardX Browser",
+  "description": "Gyrosurf Browser",
   "main": "index.js",
   "author": "Akash Khuntia",
   "license": "ISC",
@@ -9,13 +9,13 @@
   "icon": "./sysMedia/images/logo/lwthbg.png",
   "scripts": {
     "start": "electron .",
-    "dist": "electron-builder"
+    "build": "electron-builder"
   },
   "build": {
-    "appId": "com.guardx.app",
-    "productName": "GuardX",
+    "appId": "com.gyrosurf.app",
+    "productName": "Gyrosurf",
     "directories": {
-      "output": "winbuild"
+      "output": "../Builds/WinApp"
     },
     "files": [
       "**/*",

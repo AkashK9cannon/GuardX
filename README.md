@@ -18,10 +18,11 @@ This project demonstrates my ability to understand and develop software.
 ---
 
 ### Screenshot
-
+On selection of Microsoft bing as the current default search engine.
 ![Gyrosurf App Screenshot](Windows/AppScreenshots/AppImage1.png)
 
 ---
+
 
 Thank you!  
 Akash Khuntia
