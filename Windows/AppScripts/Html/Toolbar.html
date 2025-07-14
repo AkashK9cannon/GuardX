@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/AppMenuStyles/theme1.css" />
+  </head>
+  <body>
+    <div id="TabsBar" class="">
+      <div id="Tabs" class="">
+        <div class="" id="TabsContainer"></div>
+        <div onclick="CreateTab()" class="" id="AddTabBtn">+</div>
+      </div>
+      <div id="PowerButtons" class="">
+        <div id="" class="PowerButtons">
+          <img
+            src="../../sysMedia/icons/Minimize.png"
+            alt="Minimize"
+            id="Minimize"
+            onclick="Minimize()"
+          />
+        </div>
+        <div id="" class="PowerButtons">
+          <img
+            src="../../sysMedia/icons/UnMaximize.png"
+            alt="WinSizeToggle"
+            id="WinSizeToggle"
+            class="Min"
+            onclick="SetupWinSizeToggle()"
+          />
+        </div>
+        <div id="" class="PowerButtons">
+          <img
+            src="../../sysMedia/icons/Close.png"
+            alt="Close"
+            id="CloseButton"
+            class=""
+            onclick=""
+          />
+        </div>
+      </div>
+    </div>
+    <div id="ToolsBar" class="">
+      <div id="PageTools" class="">
+        <div id="" class="PageTools">
+          <img src="../../sysMedia/icons/BackArrow.png" alt="" class="" id="" />
+        </div>
+        <div id="" class="PageTools">
+          <img src="../../sysMedia/icons/Forward.png" alt="" class="" id="" />
+        </div>
+        <div id="" class="PageTools">
+          <img src="../../sysMedia/icons/reload.png" alt="" class="" id="" />
+        </div>
+        <div id="" class="PageTools">
+          <img
+            src="../../sysMedia/icons/Home_Heart.png"
+            alt=""
+            class=""
+            id=""
+          />
+        </div>
+      </div>
+      <div id="urlbar" class="">
+        <img src="../../sysMedia/icons/Encrypted.png" alt="" id="" class="" />
+        <input
+          type="search"
+          name="searchbar"
+          id="searchbar"
+          placeholder="Search or Enter a web Address"
+          value=""
+        />
+        <img src="../../sysMedia/icons/Star.png" alt="" id="" class="" />
+      </div>
+      <div id="BrowserTools" class="">
+        <img
+          src="../../sysMedia/icons/Extension.png"
+          alt=""
+          id=""
+          class="BrowserTools"
+        />
+        <img
+          src="../../sysMedia/icons/Account.png"
+          alt=""
+          id=""
+          class="BrowserTools"
+        />
+        <img
+          src="../../sysMedia/icons/info.png"
+          alt=""
+          id=""
+          class="BrowserTools"
+        />
+        <img
+          src="../../sysMedia/icons/BrowserServices.png"
+          alt=""
+          id=""
+          class="BrowserTools"
+        />
+      </div>
+    </div>
+    <script src="../Js/AppMenu.js"></script>
+  </body>
+</html>

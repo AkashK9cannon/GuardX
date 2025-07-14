@@ -1,0 +1,28 @@
+GuardX Browser License Agreement
+
+Copyright (c) 2025 Akash Khuntia
+
+This software is provided "as is", without warranty of any kind,
+express or implied. In no event shall the author be held liable
+for any damages arising from the use of this software.
+
+By installing or using this software, you agree to the terms above.
+
+You may:
+- Use this software for personal or commercial use.
+- Modify the source code for educational purposes.
+
+You may not:
+- Redistribute the software without permission.
+- Use it for any unlawful or malicious purposes.
+- I am held no responsible for this.
+
+Development Source:
+- The application is developed using Chromium, Electron and Nodejs.
+- And extensive hardwork to combine things to gether to let the user feel like a in operational real word browser.
+- It has all the facilities that a realword browser should have.
+- Over time i shall be having more tjings added to it.
+- If any user wants they can surely contact me to build a custome browser for themselves as per their wants or to modify it.
+
+Project description:
+- This project was undertaken as of educational purposes to boost my resume also to make sure that the real word experience is counted and user to feel the experience.  

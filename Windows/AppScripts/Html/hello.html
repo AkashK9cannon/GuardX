@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name="searchbar"
+      id="searchbar"
+      placeholder="Search or Enter a web Address"
+      value=""
+    />
+    <script>
+      const searchbar = document.getElementById("searchbar");
+      /**
+       * Normalizes a given string to a full HTTPS URL only if it matches specific URL patterns
+       * and ends with a recognized Top-Level Domain (TLD).
+       * Plain text or strings not matching these strict URL patterns will be returned as is.
+       *
+       * @param {string} inputString The string to be processed.
+       * @returns {string} The normalized HTTPS URL or the original string.
+       */
+      function normalizeUrl(inputString) {
+        // Define common top-level domains for robust checking.
+        // This list can be expanded for more comprehensive TLD coverage.
+        const tlds = [
+          ".com",
+          ".org",
+          ".net",
+          ".io",
+          ".co",
+          ".gov",
+          ".edu",
+          ".biz",
+          ".info",
+        ];
+
+        // Helper function to check if the string ends with a known TLD.
+        const endsWithTld = (str) => {
+          // Check if the string contains a '/' after a potential TLD,
+          // which indicates a path, and the part before the '/' ends with a TLD.
+          const firstSlashIndex = str.indexOf("/");
+          let domainPart = str;
+          if (firstSlashIndex !== -1) {
+            domainPart = str.substring(0, firstSlashIndex);
+          }
+
+          return tlds.some((tld) => domainPart.endsWith(tld));
+        };
+
+        // 1. If it already starts with 'https://' AND ends with a recognized TLD, return as is.
+        if (inputString.startsWith("https://") && endsWithTld(inputString)) {
+          return inputString;
+        }
+
+        // 2. If it starts with 'www.' AND ends with a recognized TLD, prepend 'https://'.
+        if (inputString.startsWith("www.") && endsWithTld(inputString)) {
+          return `https://${inputString}`;
+        }
+
+        // 3. If it contains at least one dot, ends with a recognized TLD,
+        //    and doesn't start with any protocol (http:// or https://) or 'www.',
+        //    then prepend 'https://www.'. This handles cases like 'google.com' or 'google.com/path'.
+        if (inputString.includes(".") && endsWithTld(inputString)) {
+          if (
+            !inputString.startsWith("http://") &&
+            !inputString.startsWith("https://") &&
+            !inputString.startsWith("www.")
+          ) {
+            return `https://www.${inputString}`;
+          }
+        }
+
+        // 4. For all other cases (e.g., plain text, URLs with unrecognized TLDs,
+        //    or malformed URLs that don't fit the above patterns), return the string as is.
+        return inputString;
+      }
+
+      // --- Test Cases ---
+      console.log("--- Test Cases ---");
+      console.log(
+        `'https://www.google.com' -> ${normalizeUrl("https://www.google.com")}`
+      ); // Stays as is
+      console.log(`'www.google.com' -> ${normalizeUrl("www.google.com")}`); // Becomes https://www.google.com
+      console.log(`'google.com' -> ${normalizeUrl("google.com")}`); // Becomes https://www.google.com
+      console.log(
+        `'hello iwant to visit google.' -> ${normalizeUrl(
+          "hello iwant to visit google."
+        )}`
+      ); // Stays as is (plain text)
+      console.log(
+        `'http://example.org' -> ${normalizeUrl("http://example.org")}`
+      ); // Stays as is (not https)
+      console.log(`'sub.domain.net' -> ${normalizeUrl("sub.domain.net")}`); // Becomes https://www.sub.domain.net
+      console.log(`'mywebsite.io' -> ${normalizeUrl("mywebsite.io")}`); // Becomes https://www.mywebsite.io
+      console.log(`'justtext' -> ${normalizeUrl("justtext")}`); // Stays as is (plain text)
+      console.log(
+        `'ftp://files.server.com' -> ${normalizeUrl("ftp://files.server.com")}`
+      ); // Stays as is (not http/https)
+      console.log(`'www.example' -> ${normalizeUrl("www.example")}`); // Stays as is ('.example' not a recognized TLD)
+      console.log(`'anysite.anything' -> ${normalizeUrl("anysite.anything")}`); // Stays as is ('.anything' not a recognized TLD)
+      console.log(
+        `'google.com/afgert' -> ${normalizeUrl("google.com/afgert")}`
+      ); // Becomes https://www.google.com/afgert
+      console.log(`'www.test.co.uk' -> ${normalizeUrl("www.test.co.uk")}`); // Stays as is ('.co.uk' not in TLD list, would need expansion)
+      console.log(`'example.xyz' -> ${normalizeUrl("example.xyz")}`); // Stays as is ('.xyz' not in TLD list, would need expansion)
+      console.log(`'https://gemini.google.com/app/2873e56fd3c0ad38',-> ${normalizeUrl('https://gemini.google.com/app/2873e56fd3c0ad38')}`)
+      console.log(`'http://127.0.0.1:5500/Windows/AppScripts/Html/hello.html',-> ${normalizeUrl('http://127.0.0.1:5500/Windows/AppScripts/Html/hello.html')}`)
+
+      searchbar.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+        //   var act = Tabs.find((t) => t.status == "active");
+          var SearchPro = searchbar.value;
+        //   console.log(act);
+          if (SearchPro == "") {
+            searchbar.placeholder = "Please type to serach or a url";
+          } else if (SearchPro != "") {
+            console.log("Got input ", normalizeUrl(SearchPro));
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

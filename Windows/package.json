@@ -1,0 +1,64 @@
+{
+  "name": "guardx",
+  "version": "0.1.0",
+  "description": "GuardX Browser",
+  "main": "index.js",
+  "author": "Akash Khuntia",
+  "license": "ISC",
+  "type": "commonjs",
+  "icon": "./sysMedia/images/logo/lwthbg.png",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.guardx.app",
+    "productName": "GuardX",
+    "directories": {
+      "output": "winbuild"
+    },
+    "files": [
+      "**/*",
+      "!Tabs.json",
+      "!settings.json"
+    ],
+    "extraResources": [
+      {
+        "from": "settings.json",
+        "to": "settings.json"
+      },
+      {
+        "from": "Tabs.json",
+        "to": "Tabs.json"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "sysMedia/images/logo/FavIcon.ico"
+    },
+    "mac": {
+      "icon": "sysMedia/images/logo/FavIcon.icns"
+    },
+    "linux": {
+      "icon": "sysMedia/images/logo/lwthbg.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "GuardX",
+      "license": "license.txt"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://your-download-server.com/guardx-updates/"
+      }
+    ]
+  },
+  "devDependencies": {
+    "electron": "^34.5.8",
+    "electron-builder": "^26.0.12"
+  }
+}

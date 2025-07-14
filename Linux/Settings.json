@@ -1,0 +1,14 @@
+{
+    "Search Engine":{
+        "Google": {
+            "icon": "",
+            "Url": "https://www.google.com",
+            "status": "active"
+        },
+        "Bing": {
+            "icon": "",
+            "Url": "",
+            "status": "inactive"
+        }
+    }
+}

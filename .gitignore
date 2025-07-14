@@ -1,0 +1,29 @@
+# Ignore node dependencies
+Android/node_modules/
+ios/node_modules/
+Linux/node_modules/
+Mac/node_modules/
+test/node_modules/
+Windows/node_modules/
+Windows/winbuild
+
+# Ignore Python virtual environments
+.venv/
+__pycache__/
+
+# Ignore build artifacts
+dist/
+Builds/
+winbuild/
+
+# Ignore editor and system files
+*.log
+*.tmp
+*.bak
+*.exe
+*.blockmap
+.DS_Store
+.idea/
+.vscode/
+
+
